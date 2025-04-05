@@ -1,104 +1,374 @@
-html{
+/* Base Styles */
+:root {
+    --primary-color: #4E31AA;
+    --secondary-color: #2F58CD;
+    --accent-color: #3795BD;
+    --light-color: #F5F5F5;
+    --dark-color: #212121;
+    --background-color: #F1F2F6;
+    --card-background: #FFFFFF;
+    --text-color: #333333;
+    --transition: all 0.3s ease;
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-body {
-    background-color: #D8C4B6;
-    padding: 5px;
-    margin: 15px;
-    font-size: 25px;
-    font-family:Arial, sans-serif;
-}
-
-
-h1 {
-    text-align: center;
-    font-family:Arial, sans-serif;
-    font-size: 1.95em;
-}
-
-h2{
-    text-align:center;
+    box-sizing: border-box;
   }
-
-li{
-    margin-top: 20px;
-}
-
-img{
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 35px;
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 2rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  
+  /* Introduction Section */
+  .intro {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .note {
+    font-style: italic;
+    color: var(--secondary-color);
+  }
+  
+  /* Game Gallery */
+  .game-gallery {
+    padding: 2rem 0;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    position: relative;
+  }
+  
+  h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+  }
+  
+  /* More organized grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .game-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .game-card figure {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .game-card img {
+    height: 220px;
     width: 100%;
-    
+    object-fit: cover;
+    transition: transform 0.5s ease;
   }
-
-.label{
+  
+  .game-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .game-card figcaption {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-background);
+  }
+  
+  .game-card h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .rating {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  /* Featured item styling */
+  .featured {
+    grid-column: span 3;
+    margin-bottom: 1rem;
+  }
+  
+  .featured img {
+    height: 400px;
+  }
+  
+  /* First two games after featured get special emphasis */
+  .grid .game-card:nth-child(2),
+  .grid .game-card:nth-child(3) {
+    grid-column: span 1.5;
+  }
+  
+  /* Make images same aspect ratio for consistency */
+  .game-card:not(.featured) img {
+    aspect-ratio: 16/9;
+  }
+  
+  .featured img {
+    height: 300px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 2rem 0;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
-
-
- .grid{
-   display: grid;
-   gap: 10px;
-   background-color: #F5EFE7;
-   text-align: center;
-}
-
-
-@media screen and (min-width: 772px ){
-    .grid {  
-        grid-template-columns: 1fr 1fr ;
-        align-items: center;
-      }
-
-    img{   
-        border-radius: 70%;
-    }
-    
-    .grid figure:nth-child(9){
-        grid-column: span 2
-        
-    }
- 
-}
- 
-@media screen and (min-width: 992px ){
-    
-    .grid figure:nth-child(3n){
-        grid-column: span 2
-        
-    }
-    img{   
-        border-radius: 0;
-    }
- 
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    scroll-behavior: auto; 
   }
-}
-
-
+  
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .back-to-top {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    font-weight: 600;
+  }
+  
+  .back-to-top:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .credits {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .featured {
+      grid-column: span 2;
+    }
+    
+    .grid .game-card:nth-child(2),
+    .grid .game-card:nth-child(3) {
+      grid-column: span 1;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .nav-links {
+      margin-top: 1rem;
+    }
+    
+    .nav-links li {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    
+    .hero {
+      padding: 3rem 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .featured {
+      grid-column: span 1;
+    }
+    
+    .featured img {
+      height: 220px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Dark Mode */
   @media (prefers-color-scheme: dark) {
- 
-    h1,
-    p,
-    figure,
-    div {
-        color: rgb(236, 236, 236);
-        border-color: black;
+    :root {
+      --background-color: #121212;
+      --card-background: #1E1E1E;
+      --text-color: #E0E0E0;
+      --primary-color: #7B68EE;
+      --secondary-color: #6A5ACD;
+      --accent-color: #5F9EA0;
     }
-
-    body{
-        background-color: #213555;
+    
+    .rating {
+      background-color: var(--primary-color);
     }
-
-    .grid{
-        background-color: #3E5879;
+    
+    .note {
+      color: var(--accent-color);
     }
-   
-}
+    
+    .game-card {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .game-card:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+  }

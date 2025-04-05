@@ -1,82 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Best Video Games </title>
+  <title>The Best Video Games</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <h1 id="top">The Best Video Games of 2024 So Far
-    </h1>
+    <nav class="navbar">
+      <div class="logo">GameSpot</div>
+      <ul class="nav-links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 id="top">The Best Video Games of 2024</h1>
+      <p class="subtitle">Games that defined this incredible year</p>
+    </div>
   </header>
 
   <main>
-    <p>2023 is a tough act to follow. IGN awarded 83 games a review score of 8 or higher last year, including five 10s — among which were two generational greats in Baldur’s Gate 3 and The Legend of Zelda: Tears of the Kingdom. A year later, the release calendar looks comparatively light, with Switch all but certainly in its final year as Nintendo’s primary console and Sony not releasing "any new major existing franchise titles" until 2025.</p>
+    <section id="about" class="intro">
+      <div class="container">
+        <p>2023 is a tough act to follow. IGN awarded 83 games a review score of 8 or higher last year, including five 10s — among which were two generational greats in Baldur's Gate 3 and The Legend of Zelda: Tears of the Kingdom. A year later, the release calendar looks comparatively light, with Switch all but certainly in its final year as Nintendo's primary console and Sony not releasing "any new major existing franchise titles" until 2025.</p>
 
-    <p>Despite the relative sparsity, 56 games have already earned a spot on this list as we move toward fall. This list compiles every game and expansion released in 2024 that received a review score of 8 or higher from IGN. Here are IGN's best video games of 2024 (so far).
-
-      This list will be updated as new releases receive qualifying review scores.</p>
+        <p>Despite the relative sparsity, 56 games have already earned a spot on this list as we move toward fall. This list compiles every game and expansion released in 2024 that received a review score of 8 or higher from IGN. Here are IGN's best video games of 2024 (so far).</p>
+        
+        <p class="note">This list will be updated as new releases receive qualifying review scores.</p>
+      </div>
+    </section>
     
-    <div class = "grid">
-        <figure>
-        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/09/frostpunk-2-header.jpg" alt="Frostpunk 2" width="200">
-        <figcaption>Frostpunk 2
-
-        </figcaption>
-        </figure>
-        <figure>
-        <img src="https://www.alanwake.com/wp-content/uploads/2024/06/NightSprings_Keyart_Final_16_9_horizontal_2.png" alt="Alan Wake 2: Night Springs
-        " width="200">
-        <figcaption>Alan Wake 2: Night Springs
-        </figcaption>
-        </figure>
-        <figure>
-        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000051252/2b756f6e320d4f9a04921b9d3f74af67f0e7e66d52aa3316a6b6ed23b662c5c9" alt="Another Crab's Treasure
-        " width="200">
-        <figcaption>Another Crab's Treasure
-        </figcaption>
-        </figure>
-        <figure>
-        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/batman-arkham-shadow-review.jpg" alt="Batman: Arkham Shadow
-        " width="200">
-        <figcaption>Batman: Arkham Shadow
-        </figcaption>
-        </figure>
-        <figure>
-        <img src="https://sm.ign.com/t/ign_nordic/review/b/black-myth/black-myth-wukong-review_xcgh.1200.jpg" alt="Black Myth: Wukong
-        " width="200">
-        <figcaption>Black Myth: Wukong
-        </figcaption>
-        </figure>
-        <figure>
-        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000060342/f7c7639659989c9eaa5f69d472ffcd71c1b8035fc958a01e980886573dba10a3" alt="Botany Manor
-        " width="200">
-        <figcaption>Botany Manor
-        </figcaption>
-        </figure>
-        <figure>
-        <img src="https://cdn3.idcgames.com/storage/image/1534/game_home_bg_section_2/default.jpg" alt="Black Ops 6" width="200">
-        <figcaption>Black Ops 6</figcaption>
-        </figure>
-        <figure>
-        <img src="https://cdn1.epicgames.com/spt-assets/44edf8a5dfbe4729a171631066bbd6b3/capes-udt3a.jpg" alt="Capes" width="200">
-        <figcaption>Capes</figcaption>
-        </figure>
-        <figure>
-        <img src="https://www.keengames.com/media/Enshrouded/Screenshots/Enshrouded_04_Shroud02_PressKit.jpg?width=2560&token=a3DRL93vgsH7qtzLywp%2BxzC6UH9VDtHcEasb7xk1Q4U%3D" alt="Enshrouded" width="200">
-        <figcaption>Enshrouded</figcaption>
-        </figure>
-    </div>
+    <section id="games" class="game-gallery">
+      <h2>Top Picks of 2024</h2>
+      <div class="grid">
+        <!-- Featured game at the top -->
+        <div class="game-card featured">
+          <figure>
+            <img src="https://sm.ign.com/t/ign_nordic/review/b/black-myth/black-myth-wukong-review_xcgh.1200.jpg" alt="Black Myth: Wukong">
+            <figcaption>
+              <h3>Black Myth: Wukong</h3>
+              <div class="rating">9.7/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <!-- Secondary featured games -->
+        <div class="game-card">
+          <figure>
+            <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/09/frostpunk-2-header.jpg" alt="Frostpunk 2">
+            <figcaption>
+              <h3>Frostpunk 2</h3>
+              <div class="rating">9.5/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="game-card">
+          <figure>
+            <img src="https://www.alanwake.com/wp-content/uploads/2024/06/NightSprings_Keyart_Final_16_9_horizontal_2.png" alt="Alan Wake 2: Night Springs">
+            <figcaption>
+              <h3>Alan Wake 2: Night Springs</h3>
+              <div class="rating">9.2/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <!-- Regular games in a structured grid -->
+        <div class="game-card">
+          <figure>
+            <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/batman-arkham-shadow-review.jpg" alt="Batman: Arkham Shadow">
+            <figcaption>
+              <h3>Batman: Arkham Shadow</h3>
+              <div class="rating">9.0/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="game-card">
+          <figure>
+            <img src="https://cdn3.idcgames.com/storage/image/1534/game_home_bg_section_2/default.jpg" alt="Black Ops 6">
+            <figcaption>
+              <h3>Black Ops 6</h3>
+              <div class="rating">8.9/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="game-card">
+          <figure>
+            <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000051252/2b756f6e320d4f9a04921b9d3f74af67f0e7e66d52aa3316a6b6ed23b662c5c9" alt="Another Crab's Treasure">
+            <figcaption>
+              <h3>Another Crab's Treasure</h3>
+              <div class="rating">8.8/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="game-card">
+          <figure>
+            <img src="https://www.keengames.com/media/Enshrouded/Screenshots/Enshrouded_04_Shroud02_PressKit.jpg?width=2560&token=a3DRL93vgsH7qtzLywp%2BxzC6UH9VDtHcEasb7xk1Q4U%3D" alt="Enshrouded">
+            <figcaption>
+              <h3>Enshrouded</h3>
+              <div class="rating">8.7/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="game-card">
+          <figure>
+            <img src="https://cdn1.epicgames.com/spt-assets/44edf8a5dfbe4729a171631066bbd6b3/capes-udt3a.jpg" alt="Capes">
+            <figcaption>
+              <h3>Capes</h3>
+              <div class="rating">8.5/10</div>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="game-card">
+          <figure>
+            <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000060342/f7c7639659989c9eaa5f69d472ffcd71c1b8035fc958a01e980886573dba10a3" alt="Botany Manor">
+            <figcaption>
+              <h3>Botany Manor</h3>
+              <div class="rating">8.2/10</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <a href="#top">Jump to the Top</a>
+    <div class="container">
+      <p>&copy; 2024 GameSpot. All rights reserved.</p>
+      <a href="#top" class="back-to-top">Back to Top</a>
+      <p class="credits">All reviews based on IGN scores</p>
+    </div>
   </footer>
 </body>
-
 </html>
